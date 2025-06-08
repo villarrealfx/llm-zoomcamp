@@ -18,6 +18,28 @@ What's the `version.build_hash` value?
 ## Answer
 `"build_hash" : "dbcbbbd0bc4924cfeb28929dc05d82d662c527b7"`
 
+```bash
+curl localhost:9200
+
+{
+  "name" : "8ecda94a8498",
+  "cluster_name" : "docker-cluster",
+  "cluster_uuid" : "YVhGXINSTB6mxh7Yd8ycEw",
+  "version" : {
+    "number" : "8.17.6",
+    "build_flavor" : "default",
+    "build_type" : "docker",
+    "build_hash" : "dbcbbbd0bc4924cfeb28929dc05d82d662c527b7",
+    "build_date" : "2025-04-30T14:07:12.231372970Z",
+    "build_snapshot" : false,
+    "lucene_version" : "9.12.0",
+    "minimum_wire_compatibility_version" : "7.17.0",
+    "minimum_index_compatibility_version" : "7.0.0"
+  },
+  "tagline" : "You Know, for Search"
+}
+```
+
 
 ## Getting the data
 
@@ -92,7 +114,7 @@ Look at the `_score` field.
 For this item, the `search_query` variable was configured as follows:
 ```python
 search_query = {
-        "size": 10,
+        "size": 5,
         "query": {
             "bool": {
                 "must": {
@@ -265,19 +287,19 @@ Let's send the prompt to OpenAI. What's the response?
 
 Note: you can replace OpenAI with Ollama. See module 2.
 
-## Bonus: calculating the costs (ungraded)
-
-Suppose that on average per request we send 150 tokens and receive back 250 tokens.
-
-How much will it cost to run 1000 requests?
-
-You can see the prices [here](https://openai.com/api/pricing/)
-
-On June 17, the prices for gpt4o are:
-
-* Input: $0.005 / 1K tokens
-* Output: $0.015 / 1K tokens
-
-You can redo the calculations with the values you got in Q6 and Q7.
-
 ## Answer
+To copy a file to a Docker container, you can use the `docker cp` command with the following syntax:
+
+```bash
+docker cp /path/to/local/file_or_directory container_id:/path/in/container
+```
+
+For example, if you want to copy a file named `example.txt` from your local machine to a container with ID `abc123` into the `/app` directory inside the container, you would run:  
+
+```bash
+docker cp example.txt abc123:/app/
+```  
+
+This command works for both files and directories.  
+
+(Source: Hrithik Kumar Advani)
