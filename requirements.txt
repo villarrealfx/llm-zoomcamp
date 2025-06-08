@@ -1,0 +1,10 @@
+python-dotenv
+tqdm
+openai
+elasticsearch==8.17.2
+pandas 
+scikit-learn 
+ipywidgets
+request
+
+# ERROR: No matching distribution found for elasticsearch==8.17.6
