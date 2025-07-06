@@ -13,3 +13,23 @@ In this document you will find the different modules of the course and the links
 
 * [Homework Answers](01-intro/README.md)
 * [Notebook](01-intro/01-Homework.ipynb)
+
+### Module 2: Vector Search
+**Objetive**
+- Vector search and embeddings
+- Indexing and retrieving data efficiently
+- Using Qdrant as the vestor database
+
+**Documents**
+
+* [Homework Answers](02-vector-search/README.md)
+* [Notebook](02-vector-search/01-Homework.ipynb)
+
+### Module 2.1: Workshop: Open-Source Data Ingestion
+**Objetive**
+- Using `dlt` for ingesting data for RAG
+
+**Documents**
+
+* [Homework Answers](02.1-dlt/README.md)
+* [Notebook](02.1-dlt/01-Homework.ipynb)
